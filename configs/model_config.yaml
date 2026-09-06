@@ -1,0 +1,46 @@
+# ==============================================================================
+# Model training configuration
+# ==============================================================================
+
+model:
+  type: xgboost
+  random_state: 42
+  cv_folds: 5
+  test_size: 0.2
+
+  features:
+    - sst
+    - sst_anomaly
+    - chlor_a
+    - chlor_a_rolling_30
+    - chlor_a_anomaly
+    - kd490
+    - par
+    - bathymetry_depth
+    - bathymetry_slope
+    - distance_to_coast
+    - frontal_index
+    - productivity_index
+    - upwelling_proxy
+    - month_sin
+    - month_cos
+
+  xgboost_params:
+    n_estimators: 300
+    max_depth: 6
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    objective: reg:squarederror
+    eval_metric: rmse
+
+feature_engineering:
+  rolling_windows_days: [7, 14, 30, 90]
+  lag_days: [7, 14, 30]
+  spatial_lag_radii_km: [20, 50, 100]
+  use_sin_cos_time: true
+  cloud_fill_method: temporal_interp
+
+sustainability:
+  msy_ratio_sustainable: 0.6
+  msy_ratio_caution: 0.8

@@ -1,0 +1,33 @@
+%% =============================================================================
+%% "Before" vs "After" at each preprocessing stage (visualized in
+%% docs/diagrams/stage_before_after_*.png from real granules).
+%% =============================================================================
+
+flowchart TB
+    subgraph STAGE0["BEFORE - STAGE 0: RAW GRANULE"]
+        R1["9 km global grid<br/>huge Nothern/land areas"]
+        R2["NaN pixels where clouds cover<br/>coastlines & shallow water masked"]
+    end
+
+    subgraph STAGE1["AFTER - STAGE 1: GAP FILL"]
+        G1["cloud gaps interpolated<br/>along the time axis"]
+        G2["long NaN runs (&gt;4 steps)<br/>still flagged (kept honest)"]
+    end
+
+    subgraph STAGE2["AFTER - STAGE 2: REGRID"]
+        R3["0.1 deg ($\\approx$11 km) study grid<br/>Philippine bbox only"]
+        R4["all variables share one grid<br/>land masked from bathymetry"]
+    end
+
+    subgraph STAGE3["AFTER - STAGE 3: FEATURES"]
+        F1["SST / CHL monthly anomalies"]
+        F2["frontal index, productivity index,<br/>upwelling proxy"]
+        F3["spatial lags (20/50/100 km)<br/>rolling means (7-90 d)"]
+    end
+
+    STAGE0 --> STAGE1 --> STAGE2 --> STAGE3
+
+    style STAGE0 fill:#401010,color:#fff,stroke:#2b0b0b
+    style STAGE1 fill:#1a3d5c,color:#fff,stroke:#0f2a40
+    style STAGE2 fill:#0f4d3a,color:#fff,stroke:#093427
+    style STAGE3 fill:#5c361a,color:#fff,stroke:#40240f

@@ -1,0 +1,71 @@
+%% =============================================================================
+%% OceanForecast Philippines - System Architecture
+%% Dynamic Oceanographic Fisheries Yield Forecasting
+%% Render this with any Mermaid viewer (VS Code, mermaid.live, GitHub).
+%% =============================================================================
+
+flowchart TB
+    subgraph SOURCES["DATA SOURCES (free & public)"]
+        DIR["NASA OB.DAAC / Earthdata CMR"]
+        D2["GEBCO 2024 / NOAA ETOPO 2022<br/>Bathymetry (OPeNDAP subset)"]
+        D3["PSA OpenStat / BFAR<br/>Catch statistics (province x species x quarter)"]
+        D4["Species habitat preferences<br/>(SST & CHL optima per species)"]
+    end
+
+    subgraph ACQ["STAGE 1 - ACQUISITION (src/data)"]
+        S1["satellite.py<br/>earthaccess CMR search + download"]
+        S2["bathymetry.py<br/>OPeNDAP subset -> depth + slope"]
+        S3["fisheries.py<br/>catch parsing + province join"]
+        M["Manifest CSV (resumable)"]
+        S1 --> M
+    end
+
+    subgraph PREP["STAGE 2 - PREPROCESSING (src/processing)"]
+        G["grid.py<br/>0.1 deg study grid + land mask"]
+        SP["spatial.py<br/>regrid + dist-to-coast + spatial lags"]
+        T["temporal.py<br/>cloud gap-fill + rolling means + anomalies"]
+        I["indices.py<br/>frontal / productivity / upwelling"]
+        P["pipeline.py<br/>feature cube (Zarr) + long feature matrix"]
+        G --> SP --> T --> I --> P
+    end
+
+    subgraph ML["STAGE 3 - MODELING (src/models)"]
+        F["Feature matrix<br/>[cell x time] rows"]
+        CB["XGBoost per species<br/>time-aware cross-validation"]
+        EV["evaluate.py<br/>RMSE/MAE/R2 + map validation"]
+        RG["registry.py<br/>model versioning"]
+        F --> CB --> EV --> RG
+    end
+
+    subgraph UI["STAGE 4 - STREAMLIT APP (app/)"]
+        U1["Interactive map<br/>Folium + satellite basemap"]
+        U2["Inputs: region / species / date"]
+        U3["Heatmap: high-probability fishing zones"]
+        U4["Yield forecast + overfishing risk gauge"]
+        U5["Environmental summary charts"]
+    end
+
+    DIR --> S1
+    D2 --> S2
+    D3 --> S3
+    D4 --> F
+
+    S1 --> G
+    S2 --> G
+    S3 --> F
+    P --> F
+
+    RG --> U1
+    RG --> U3
+    U2 --> RG
+
+    classDef src fill:#1a3d5c,color:#fff,stroke:#0f2a40;
+    classDef proc fill:#0f4d3a,color:#fff,stroke:#093427;
+    classDef ml   fill:#5c361a,color:#fff,stroke:#40240f;
+    classDef ui   fill:#4a1a5c,color:#fff,stroke:#331040;
+    classDef dsrc fill:#333,color:#eee,stroke:#222;
+    class S1,S2,S3 src;
+    class G,SP,T,I,P proc;
+    class F,CB,EV,RG ml;
+    class U1,U2,U3,U4,U5 ui;
+    class DIR,D2,D3,D4 dsrc;

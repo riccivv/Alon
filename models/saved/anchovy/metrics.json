@@ -1,0 +1,94 @@
+{
+  "species_code": "anchovy",
+  "species_name": "Anchovies (Stolephorus/Encrasicholina)",
+  "label_kind": "catch",
+  "target_transform": "log1p",
+  "n_train": 24356,
+  "n_val": 5843,
+  "n_holdout": 2980,
+  "val_metrics": {
+    "rmse": 1.4136294211583973,
+    "mae": 1.0680700761769604,
+    "r2": 0.39366906621221065
+  },
+  "feature_importance": [
+    {
+      "feature": "dist_coast",
+      "importance": 0.5810282230377197
+    },
+    {
+      "feature": "slope",
+      "importance": 0.22248904407024384
+    },
+    {
+      "feature": "depth",
+      "importance": 0.1525246798992157
+    },
+    {
+      "feature": "month_cos",
+      "importance": 0.017425449565052986
+    },
+    {
+      "feature": "month_sin",
+      "importance": 0.012187421321868896
+    },
+    {
+      "feature": "par",
+      "importance": 0.00335092656314373
+    },
+    {
+      "feature": "chl_roll30d",
+      "importance": 0.0019441553158685565
+    },
+    {
+      "feature": "chl",
+      "importance": 0.0016476534074172378
+    },
+    {
+      "feature": "upwelling_proxy",
+      "importance": 0.0015135487774387002
+    },
+    {
+      "feature": "kd490",
+      "importance": 0.001494265510700643
+    },
+    {
+      "feature": "productivity_index",
+      "importance": 0.0013062733924016356
+    },
+    {
+      "feature": "chl_anom",
+      "importance": 0.0012383608845993876
+    },
+    {
+      "feature": "sst_anom",
+      "importance": 0.0012331794714555144
+    },
+    {
+      "feature": "sst",
+      "importance": 0.0006168360123410821
+    }
+  ],
+  "features": [
+    "sst",
+    "sst_anom",
+    "chl",
+    "chl_roll30d",
+    "chl_anom",
+    "kd490",
+    "par",
+    "depth",
+    "slope",
+    "dist_coast",
+    "frontal_index",
+    "productivity_index",
+    "upwelling_proxy",
+    "month_sin",
+    "month_cos"
+  ],
+  "holdout_metrics": {
+    "rmse": 1.434407295078558,
+    "mae": 1.1315050448524513,
+    "r2": 0.38443743304655575
+  }
+}

@@ -1,0 +1,89 @@
+psa_name,adm_name,region,lat,lon,source
+Abra,Abra,Cordillera Administrative Region (CAR),17.5639419,120.7996429,PSA/OCHA adm2 center
+Agusan del Norte,Agusan del Norte,Region XIII (Caraga),9.08001392,125.64108928,PSA/OCHA adm2 center
+Agusan del Sur,Agusan del Sur,Region XIII (Caraga),8.5804965,125.63040652,PSA/OCHA adm2 center
+Aklan,Aklan,Region VI (Western Visayas),11.62519917,122.27675419,PSA/OCHA adm2 center
+Albay,Albay,Region V (Bicol Region),13.25471444,123.55369634,PSA/OCHA adm2 center
+Antique,Antique,Region VI (Western Visayas),11.11709162,122.14542001,PSA/OCHA adm2 center
+Apayao,Apayao,Cordillera Administrative Region (CAR),18.08946758,121.19680305,PSA/OCHA adm2 center
+Aurora,Aurora,Region III (Central Luzon),15.75281079,121.45850071,PSA/OCHA adm2 center
+Basilan,Basilan,Bangsamoro Autonomous Region In Muslim Mindanao (BARMM),6.5788698,122.12724425,PSA/OCHA adm2 center
+Bataan,Bataan,Region III (Central Luzon),14.66513774,120.42775986,PSA/OCHA adm2 center
+Batanes,Batanes,Region II (Cagayan Valley),20.7621812,121.84616566,PSA/OCHA adm2 center
+Batangas,Batangas,Region IV-A (Calabarzon),13.91360708,121.03701312,PSA/OCHA adm2 center
+Benguet,Benguet,Cordillera Administrative Region (CAR),16.55348834,120.70264554,PSA/OCHA adm2 center
+Biliran,Biliran,Region VIII (Eastern Visayas),11.58432949,124.48540604,PSA/OCHA adm2 center
+Bohol,Bohol,Region VII (Central Visayas),9.88064393,124.20675476,PSA/OCHA adm2 center
+Bukidnon,Bukidnon,Region X (Northern Mindanao),8.0051681,124.96819481,PSA/OCHA adm2 center
+Bulacan,Bulacan,Region III (Central Luzon),14.98035044,121.10858957,PSA/OCHA adm2 center
+Cagayan,Cagayan,Region II (Cagayan Valley),18.06401878,121.81553421,PSA/OCHA adm2 center
+Camarines Norte,Camarines Norte,Region V (Bicol Region),14.09345585,122.81669126,PSA/OCHA adm2 center
+Camarines Sur,Camarines Sur,Region V (Bicol Region),13.68197008,123.20627302,PSA/OCHA adm2 center
+Camiguin,Camiguin,Region X (Northern Mindanao),9.16838842,124.71361731,PSA/OCHA adm2 center
+Capiz,Capiz,Region VI (Western Visayas),11.37370827,122.64133496,PSA/OCHA adm2 center
+Catanduanes,Catanduanes,Region V (Bicol Region),13.80842176,124.27470626,PSA/OCHA adm2 center
+Cavite,Cavite,Region IV-A (Calabarzon),14.27838709,120.85146283,PSA/OCHA adm2 center
+Cebu,Cebu,Region VII (Central Visayas),10.34928559,123.78125813,PSA/OCHA adm2 center
+City of Bacolod,City of Bacolod,Region VI (Western Visayas),10.67,122.95,manual anchor
+City of Butuan,City of Butuan,Region XIII (Caraga),8.95,125.54,manual anchor
+City of Davao,City of Davao,Region XI (Davao Region),7.07,125.61,manual anchor
+City of Puerto Princesa,City of Puerto Princesa,Mimaropa Region,9.74,118.73,manual anchor
+City of Zamboanga,City of Zamboanga,Region IX (Zamboanga Peninsula),6.91,122.07,manual anchor
+Cotabato,Cotabato (North Cotabato),Region XII (Soccsksargen),7.18255075,125.03926534,PSA/OCHA adm2 center
+Davao Occidental,Davao Occidental,Region XI (Davao Region),6.09403861,125.62203303,PSA/OCHA adm2 center
+Davao Oriental,Davao Oriental,Region XI (Davao Region),7.13567704,126.27482899,PSA/OCHA adm2 center
+Davao de Oro,Davao de Oro (Compostela Valley),Region XI (Davao Region),7.53552959,126.0852385,PSA/OCHA adm2 center
+Davao del Norte,Davao del Norte,Region XI (Davao Region),7.61280915,125.62624264,PSA/OCHA adm2 center
+Davao del Sur,Davao del Sur,Region XI (Davao Region),6.99828703,125.37562023,PSA/OCHA adm2 center
+Dinagat Islands,Dinagat Islands,Region XIII (Caraga),10.16163118,125.58748098,PSA/OCHA adm2 center
+Eastern Samar,Eastern Samar,Region VIII (Eastern Visayas),11.68016857,125.37822695,PSA/OCHA adm2 center
+Guimaras,Guimaras,Region VI (Western Visayas),10.57970394,122.60885872,PSA/OCHA adm2 center
+Ifugao,Ifugao,Cordillera Administrative Region (CAR),16.82368566,121.1700354,PSA/OCHA adm2 center
+Ilocos Norte,Ilocos Norte,Region I (Ilocos Region),18.21820507,120.73941457,PSA/OCHA adm2 center
+Ilocos Sur,Ilocos Sur,Region I (Ilocos Region),17.28746596,120.53033434,PSA/OCHA adm2 center
+Iloilo,Iloilo,Region VI (Western Visayas),11.03243959,122.61539346,PSA/OCHA adm2 center
+Isabela,Isabela,Region II (Cagayan Valley),16.98951132,122.01735492,PSA/OCHA adm2 center
+Kalinga,Kalinga,Cordillera Administrative Region (CAR),17.42996788,121.31300079,PSA/OCHA adm2 center
+La Union,La Union,Region I (Ilocos Region),16.56110332,120.41695417,PSA/OCHA adm2 center
+Laguna,Laguna,Region IV-A (Calabarzon),14.27956327,121.51097425,PSA/OCHA adm2 center
+Lanao del Norte,Lanao del Norte,Region X (Northern Mindanao),8.01433078,123.93350271,PSA/OCHA adm2 center
+Lanao del Sur,Lanao del Sur,Bangsamoro Autonomous Region In Muslim Mindanao (BARMM),7.78185002,124.34850175,PSA/OCHA adm2 center
+Leyte,Leyte,Region VIII (Eastern Visayas),10.87437837,124.86086048,PSA/OCHA adm2 center
+Maguindanao del Norte,Maguindanao del Norte,Bangsamoro Autonomous Region In Muslim Mindanao (BARMM),7.18955064,124.25404525,PSA/OCHA adm2 center
+Maguindanao del Sur,Maguindanao del Sur,Bangsamoro Autonomous Region In Muslim Mindanao (BARMM),6.89106742,124.46837909,PSA/OCHA adm2 center
+Marinduque,Marinduque,Mimaropa Region,13.38482909,121.98254897,PSA/OCHA adm2 center
+Masbate,Masbate,Region V (Bicol Region),12.16086097,123.74503562,PSA/OCHA adm2 center
+Misamis Occidental,Misamis Occidental,Region X (Northern Mindanao),8.34118801,123.70566845,PSA/OCHA adm2 center
+Misamis Oriental,Misamis Oriental,Region X (Northern Mindanao),8.62689683,124.98187606,PSA/OCHA adm2 center
+Mountain Province,Mountain Province,Cordillera Administrative Region (CAR),17.05592758,121.05256767,PSA/OCHA adm2 center
+National Capital Region (NCR),National Capital Region (NCR),Metropolitan Manila (NCR districts),14.6,121.0,manual anchor
+Negros Occidental,Negros Occidental,Region VI (Western Visayas),10.22389048,122.99911854,PSA/OCHA adm2 center
+Negros Oriental,Negros Oriental,Region VII (Central Visayas),9.73899193,122.99480169,PSA/OCHA adm2 center
+Northern Samar,Northern Samar,Region VIII (Eastern Visayas),12.36118849,124.81821082,PSA/OCHA adm2 center
+Nueva Ecija,Nueva Ecija,Region III (Central Luzon),15.65687999,120.99079632,PSA/OCHA adm2 center
+Nueva Vizcaya,Nueva Vizcaya,Region II (Cagayan Valley),16.25504614,121.10957184,PSA/OCHA adm2 center
+Occidental Mindoro,Occidental Mindoro,Mimaropa Region,12.86934587,121.01371755,PSA/OCHA adm2 center
+Oriental Mindoro,Oriental Mindoro,Mimaropa Region,12.86676633,121.36614097,PSA/OCHA adm2 center
+Palawan,Palawan,Mimaropa Region,12.14507988,120.02798499,PSA/OCHA adm2 center
+Pampanga,Pampanga,Region III (Central Luzon),15.02291883,120.65665641,PSA/OCHA adm2 center
+Pangasinan,Pangasinan,Region I (Ilocos Region),16.00595322,120.33322685,PSA/OCHA adm2 center
+Quezon,Quezon,Region IV-A (Calabarzon),14.18943105,121.67080334,PSA/OCHA adm2 center
+Quirino,Quirino,Region II (Cagayan Valley),16.28469367,121.67692906,PSA/OCHA adm2 center
+Rizal,Rizal,Region IV-A (Calabarzon),14.56063868,121.26839748,PSA/OCHA adm2 center
+Romblon,Romblon,Mimaropa Region,12.386653,122.58659184,PSA/OCHA adm2 center
+Samar,Samar (Western Samar),Region VIII (Eastern Visayas),11.71342136,125.14911842,PSA/OCHA adm2 center
+Sarangani,Sarangani,Region XII (Soccsksargen),6.02935078,124.65844513,PSA/OCHA adm2 center
+Siquijor,Siquijor,Region VII (Central Visayas),9.19785786,123.55958106,PSA/OCHA adm2 center
+Sorsogon,Sorsogon,Region V (Bicol Region),12.82761527,123.99789027,PSA/OCHA adm2 center
+South Cotabato,South Cotabato,Region XII (Soccsksargen),6.31303751,124.7945219,PSA/OCHA adm2 center
+Sultan Kudarat,Sultan Kudarat,Region XII (Soccsksargen),6.50123904,124.31932824,PSA/OCHA adm2 center
+Southern Leyte,Southern Leyte,Region VIII (Eastern Visayas),10.30265828,125.1561548,PSA/OCHA adm2 center
+Sulu,Sulu,Bangsamoro Autonomous Region In Muslim Mindanao (BARMM),5.97358443,121.15629622,PSA/OCHA adm2 center
+Surigao del Norte,Surigao del Norte,Region XIII (Caraga),9.57541064,125.57633641,PSA/OCHA adm2 center
+Surigao del Sur,Surigao del Sur,Region XIII (Caraga),8.71029166,126.10125328,PSA/OCHA adm2 center
+Tarlac,Tarlac,Region III (Central Luzon),15.51461276,120.46262572,PSA/OCHA adm2 center
+Tawi-tawi,Tawi-Tawi,Bangsamoro Autonomous Region In Muslim Mindanao (BARMM),5.19783787,120.0342535,PSA/OCHA adm2 center
+Zambales,Zambales,Region III (Central Luzon),15.30595813,120.11937122,PSA/OCHA adm2 center
+Zamboanga Sibugay,Zamboanga Sibugay,Region IX (Zamboanga Peninsula),7.69319899,122.93933716,PSA/OCHA adm2 center
+Zamboanga del Norte,Zamboanga del Norte,Region IX (Zamboanga Peninsula),7.93327397,122.42699002,PSA/OCHA adm2 center
+Zamboanga del Sur,Zamboanga del Sur,Region IX (Zamboanga Peninsula),7.81459,123.25706509,PSA/OCHA adm2 center

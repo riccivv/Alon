@@ -1,0 +1,46 @@
+# ==============================================================================
+# NASA Satellite dataset configuration
+# ==============================================================================
+
+satellite_datasets:
+  chlorophyll:
+    short_name: MODISA_L3m_CHL
+    granule_pattern: "*.8D*.9km*"
+    variable: chlor_a
+    units: mg/m^3
+    spatial_res: 9km
+    temporal_res: 8-day
+
+  sst:
+    short_name: MODISA_L3m_SST
+    granule_pattern: "*.8D*.9km*"
+    variable: sst
+    units: degC
+    spatial_res: 9km
+    temporal_res: 8-day
+
+  par:
+    short_name: MODISA_L3m_PAR
+    granule_pattern: "*.8D*.9km*"
+    variable: par
+    units: E/m^2/day
+    spatial_res: 9km
+    temporal_res: 8-day
+
+  kd490:
+    short_name: MODISA_L3m_Kd490
+    granule_pattern: "*.8D*.9km*"
+    variable: kd_490
+    units: 1/m
+    spatial_res: 9km
+    temporal_res: 8-day
+
+default_temporal:
+  start: "2015-01-01"
+  end: "2025-12-31"
+
+cloud_cover_max: 50
+
+bathymetry:
+  url: "https://www.gebco.net/data_and_products/gridded_bathymetry_data/gebco_2024/GEBCO_2024.nc"
+  variable: elevation

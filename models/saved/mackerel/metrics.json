@@ -1,0 +1,90 @@
+{
+  "species_code": "mackerel",
+  "species_name": "Indian Mackerel (Rastrelliger)",
+  "label_kind": "catch",
+  "target_transform": "log1p",
+  "n_train": 24873,
+  "n_val": 5979,
+  "n_holdout": 2989,
+  "val_metrics": {
+    "rmse": 1.2175049738077837,
+    "mae": 0.9685165093056759,
+    "r2": 0.5070134028794356
+  },
+  "feature_importance": [
+    {
+      "feature": "dist_coast",
+      "importance": 0.6278007626533508
+    },
+    {
+      "feature": "slope",
+      "importance": 0.20073507726192474
+    },
+    {
+      "feature": "depth",
+      "importance": 0.1425076574087143
+    },
+    {
+      "feature": "par",
+      "importance": 0.011646199971437454
+    },
+    {
+      "feature": "month_cos",
+      "importance": 0.007657667621970177
+    },
+    {
+      "feature": "month_sin",
+      "importance": 0.00717517826706171
+    },
+    {
+      "feature": "kd490",
+      "importance": 0.000702566234394908
+    },
+    {
+      "feature": "chl_roll30d",
+      "importance": 0.0005372457089833915
+    },
+    {
+      "feature": "productivity_index",
+      "importance": 0.0004006520612165332
+    },
+    {
+      "feature": "chl",
+      "importance": 0.00030318298377096653
+    },
+    {
+      "feature": "chl_anom",
+      "importance": 0.0002707918465603143
+    },
+    {
+      "feature": "sst_anom",
+      "importance": 0.00014060088142286986
+    },
+    {
+      "feature": "sst",
+      "importance": 0.00012250839790794998
+    }
+  ],
+  "features": [
+    "sst",
+    "sst_anom",
+    "chl",
+    "chl_roll30d",
+    "chl_anom",
+    "kd490",
+    "par",
+    "depth",
+    "slope",
+    "dist_coast",
+    "frontal_index",
+    "productivity_index",
+    "upwelling_proxy",
+    "month_sin",
+    "month_cos"
+  ],
+  "holdout_metrics": {
+    "rmse": 1.3422231208670363,
+    "mae": 1.0152023221593391,
+    "r2": 0.4668162062665422
+  }
+}

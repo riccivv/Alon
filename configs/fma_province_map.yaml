@@ -1,0 +1,154 @@
+#
+# Curated province -> FMA map (OceanForecast Philippines)
+#
+# The BFAR FMA-263 management zones split the Philippine EEZ into six large
+# areas. PSA catch exports are filed by *province*, not by management area, so
+# each coastal province is assigned here to the FMA its dominant fishing
+# grounds fall inside (border provinces carry a note listing other FMAs its
+# coast touches).
+#
+# Accuracy note: this is a best-effort static lookup. The training join does
+# NOT use FMA (see src/models/labels.py -- only lat/lon/year/quarter merge
+# catches to cells), so the main consumer is the FMA breakdown shown in the
+# app and decision docs. Border assignments can be refined later if an
+# official FMA polygon set is obtained.
+#
+version: 2026-09-06
+fma_province_map:
+  1:
+    name: FMA1 - North Philippine Sea
+    provinces:
+      - name: Batanes
+      - name: Cagayan
+      - name: Isabela
+        note: Pacific coast only; also FMA6
+      - name: Ilocos Norte
+      - name: Ilocos Sur
+      - name: La Union
+      - name: Pangasinan
+        note: Lingayen Gulf; also FMA2
+      - name: Abra
+        note: inland (no marine catch)
+      - name: Apayao
+        note: inland (no marine catch)
+      - name: Benguet
+        note: inland (no marine catch)
+      - name: Ifugao
+        note: inland (no marine catch)
+      - name: Kalinga
+        note: inland (no marine catch)
+      - name: Mountain Province
+        note: inland (no marine catch)
+      - name: Quirino
+        note: inland (no marine catch)
+      - name: Nueva Vizcaya
+        note: inland (no marine catch)
+  2:
+    name: FMA2 - West Philippine Sea
+    provinces:
+      - name: Zambales
+      - name: Bataan
+      - name: Pampanga
+      - name: Bulacan
+      - name: National Capital Region (NCR)
+      - name: Cavite
+      - name: Batangas
+      - name: Marinduque
+        note: Sibuyan Sea; also FMA4/FMA6
+      - name: Occidental Mindoro
+      - name: Oriental Mindoro
+        note: east coast reaches FMA5
+      - name: Palawan
+        note: southern/eastern coasts reach FMA5; split by city where feasible
+      - name: City of Puerto Princesa
+      - name: Nueva Ecija
+        note: inland (no marine catch)
+      - name: Tarlac
+        note: inland (no marine catch)
+      - name: Laguna
+        note: inland (no marine catch)
+      - name: Rizal
+        note: inland (no marine catch)
+  3:
+    name: FMA3 - Sulu-Celebes Sea
+    provinces:
+      - name: Basilan
+      - name: Sulu
+      - name: Tawi-tawi
+      - name: Zamboanga del Sur
+      - name: Zamboanga Sibugay
+      - name: City of Zamboanga
+      - name: Sarangani
+      - name: South Cotabato
+      - name: Sultan Kudarat
+      - name: Cotabato
+      - name: Maguindanao del Norte
+      - name: Maguindanao del Sur
+      - name: Lanao del Sur
+        note: inland (no marine catch)
+  4:
+    name: FMA4 - Visayan Sea
+    provinces:
+      - name: Aklan
+      - name: Antique
+      - name: Capiz
+      - name: Iloilo
+      - name: Guimaras
+      - name: Negros Occidental
+      - name: Negros Oriental
+      - name: City of Bacolod
+      - name: Cebu
+      - name: Bohol
+      - name: Siquijor
+      - name: Masbate
+        note: divides Visayan (west) and East PH Sea (east); primary FMA4
+      - name: Romblon
+        note: Sibuyan Sea; also FMA2/FMA6
+  5:
+    name: FMA5 - West Sulu Sea
+    provinces:
+      - name: Zamboanga del Norte
+        note: Sulu Sea coast; also FMA3
+      - name: Lanao del Norte
+        note: Iligan Bay; also FMA3
+      - name: Misamis Occidental
+        note: Panguil/Iligan Bay; also FMA3
+  6:
+    name: FMA6 - East Philippine Sea
+    provinces:
+      - name: Aurora
+        note: Pacific coast; also FMA1
+      - name: Quezon
+        note: Pacific/Sibuyan; also FMA2
+      - name: Camarines Norte
+      - name: Camarines Sur
+      - name: Catanduanes
+      - name: Albay
+      - name: Sorsogon
+      - name: Biliran
+      - name: Leyte
+        note: west coast reaches FMA4
+      - name: Southern Leyte
+        note: west coast reaches FMA4
+      - name: Northern Samar
+      - name: Eastern Samar
+      - name: Samar
+      - name: Surigao del Norte
+      - name: Surigao del Sur
+      - name: Dinagat Islands
+      - name: Agusan del Norte
+      - name: Agusan del Sur
+        note: inland (no marine catch)
+      - name: Misamis Oriental
+      - name: Camiguin
+        note: Bohol Sea; also FMA5
+      - name: Bukidnon
+        note: inland (no marine catch)
+      - name: Davao del Norte
+      - name: Davao de Oro
+      - name: Davao del Sur
+        note: Sarangani Bay; also FMA3
+      - name: Davao Oriental
+      - name: Davao Occidental
+      - name: City of Davao
+      - name: City of Butuan

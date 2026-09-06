@@ -1,0 +1,33 @@
+%% =============================================================================
+%% OceanForecast Philippines - ML Training & Prediction Flow
+%% =============================================================================
+
+flowchart TB
+    subgraph TRAIN["TRAINING (offline)"]
+        T1["feature matrix<br/>cell x time"] --> T2["time-aware split<br/>past train / future val"]
+        T2 --> T3["XGBoost per species<br/>spatial-temporal CV"]
+        T3 --> T4["evaluation<br/>RMSE / MAE / R2"]
+        T4 --> T5["registry<br/>save model + metadata"]
+    end
+
+    subgraph PRED["PREDICTION (online, per request)"]
+        P1["user inputs<br/>region / species / dates"] --> P2["fetch latest<br/>satellite composites"]
+        P2 --> P3["rebuild feature cube<br/>(same pipeline, future time)")
+        P3 --> P4["load species model"]
+        P4 --> P5["raw yield forecast<br/>per grid cell"]
+    end
+
+    subgraph CONS["CONSUMPTION"]
+        Q1["high-probability zones<br/>map heatmap"]
+        Q2["yield forecast per region<br/>+ confidence intervals"]
+        Q3["overfishing risk gauge<br/>yield vs. MSY estimate"]
+    end
+
+    T5 --> P4
+    P5 --> Q1
+    P5 --> Q2
+    Q2 --> Q3
+
+    style TRAIN fill:#5c361a,color:#fff,stroke:#40240f
+    style PRED fill:#1a3d5c,color:#fff,stroke:#0f2a40
+    style CONS fill:#4a1a5c,color:#fff,stroke:#331040

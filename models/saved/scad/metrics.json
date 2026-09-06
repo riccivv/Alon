@@ -1,0 +1,94 @@
+{
+  "species_code": "scad",
+  "species_name": "Round Scad (Decapterus)",
+  "label_kind": "catch",
+  "target_transform": "log1p",
+  "n_train": 24771,
+  "n_val": 6015,
+  "n_holdout": 3070,
+  "val_metrics": {
+    "rmse": 1.0857243945165453,
+    "mae": 0.8104837213666407,
+    "r2": 0.6434756197673639
+  },
+  "feature_importance": [
+    {
+      "feature": "dist_coast",
+      "importance": 0.5550483465194702
+    },
+    {
+      "feature": "slope",
+      "importance": 0.2705766558647156
+    },
+    {
+      "feature": "depth",
+      "importance": 0.1446806788444519
+    },
+    {
+      "feature": "month_cos",
+      "importance": 0.01369814109057188
+    },
+    {
+      "feature": "month_sin",
+      "importance": 0.009553326293826103
+    },
+    {
+      "feature": "par",
+      "importance": 0.001487956615164876
+    },
+    {
+      "feature": "productivity_index",
+      "importance": 0.0007992109749466181
+    },
+    {
+      "feature": "sst_anom",
+      "importance": 0.0007737144478596747
+    },
+    {
+      "feature": "chl_anom",
+      "importance": 0.0007533722091466188
+    },
+    {
+      "feature": "chl_roll30d",
+      "importance": 0.0006950930110178888
+    },
+    {
+      "feature": "sst",
+      "importance": 0.0006886469782330096
+    },
+    {
+      "feature": "upwelling_proxy",
+      "importance": 0.000544728827662766
+    },
+    {
+      "feature": "kd490",
+      "importance": 0.000364020379493013
+    },
+    {
+      "feature": "chl",
+      "importance": 0.00033611059188842773
+    }
+  ],
+  "features": [
+    "sst",
+    "sst_anom",
+    "chl",
+    "chl_roll30d",
+    "chl_anom",
+    "kd490",
+    "par",
+    "depth",
+    "slope",
+    "dist_coast",
+    "frontal_index",
+    "productivity_index",
+    "upwelling_proxy",
+    "month_sin",
+    "month_cos"
+  ],
+  "holdout_metrics": {
+    "rmse": 1.3019938652683287,
+    "mae": 1.0054804521656033,
+    "r2": 0.5515828656574484
+  }
+}

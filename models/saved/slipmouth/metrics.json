@@ -1,0 +1,86 @@
+{
+  "species_code": "slipmouth",
+  "species_name": "Slipmouth (Leiognathidae)",
+  "label_kind": "catch",
+  "target_transform": "log1p",
+  "n_train": 23353,
+  "n_val": 5543,
+  "n_holdout": 2759,
+  "val_metrics": {
+    "rmse": 1.1974801874834677,
+    "mae": 0.9066427314095907,
+    "r2": 0.559096877063439
+  },
+  "feature_importance": [
+    {
+      "feature": "dist_coast",
+      "importance": 0.46975240111351013
+    },
+    {
+      "feature": "slope",
+      "importance": 0.2900603413581848
+    },
+    {
+      "feature": "depth",
+      "importance": 0.1978832334280014
+    },
+    {
+      "feature": "par",
+      "importance": 0.015488973818719387
+    },
+    {
+      "feature": "month_cos",
+      "importance": 0.01065829023718834
+    },
+    {
+      "feature": "month_sin",
+      "importance": 0.007852875627577305
+    },
+    {
+      "feature": "chl_anom",
+      "importance": 0.00773401977494359
+    },
+    {
+      "feature": "chl",
+      "importance": 0.00023015899932943285
+    },
+    {
+      "feature": "sst",
+      "importance": 0.0001719673746265471
+    },
+    {
+      "feature": "kd490",
+      "importance": 9.645809041103348e-05
+    },
+    {
+      "feature": "sst_anom",
+      "importance": 6.878668500576168e-05
+    },
+    {
+      "feature": "chl_roll30d",
+      "importance": 2.5013544018293032e-06
+    }
+  ],
+  "features": [
+    "sst",
+    "sst_anom",
+    "chl",
+    "chl_roll30d",
+    "chl_anom",
+    "kd490",
+    "par",
+    "depth",
+    "slope",
+    "dist_coast",
+    "frontal_index",
+    "productivity_index",
+    "upwelling_proxy",
+    "month_sin",
+    "month_cos"
+  ],
+  "holdout_metrics": {
+    "rmse": 1.193112243130279,
+    "mae": 0.935997223220096,
+    "r2": 0.5383662608970418
+  }
+}

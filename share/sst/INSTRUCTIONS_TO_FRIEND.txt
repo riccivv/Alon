@@ -1,0 +1,61 @@
+INSTRUCTIONS FOR FRIEND WHO CAN ACCESS NASA OCEANDATA
+=====================================================
+Dear friend, thank you for helping!
+
+You will download 504 small ocean-temperature files from NASA and upload
+them so they can be shared back. It takes roughly an hour or two depending
+on your internet speed (total ~6 GB).
+
+You need:
+  1. A Windows computer (Windows 10 or 11). curl is already built in.
+  2. A NASA Earthdata account (free). If you don't have one, create it at
+     https://urs.earthdata.nasa.gov  (5 minutes).
+
+The script has been FIXED. The old version saved empty HTML "redirect" pages
+instead of the real files. The new version follows NASA's redirect properly,
+so it now downloads the actual data:
+  - It asks you to type your Earthdata username and password on screen.
+  - It removes any broken/failed files and retries them.
+  - It tells you how many files succeeded and re-lists any that failed
+    (in sst_failures.txt) so you can just run it again to retry.
+
+Steps:
+  1. Put this whole folder somewhere easy, e.g. C:\sst
+  2. Open PowerShell (Start menu -> type "powershell" -> open it).
+  3. Run:
+        cd C:\sst
+        powershell -ExecutionPolicy Bypass -File .\download_sst.ps1
+     If the command is blocked by antivirus, that's normal for downloaded
+     scripts; you can instead type the steps manually (see below).
+  4. Enter YOUR OWN Earthdata username and password when it asks.
+  5. Wait until it finishes. It will download into the "nc" subfolder.
+  6. It will then create a single file "sst_all.zip" (~6 GB) for you.
+     Check the summary: it should say "Downloaded 504 of 504 files".
+  7. Go to https://drive.google.com  -> New -> File upload -> pick
+     "sst_all.zip". Or drag the "nc" folder into Drive.
+  8. Right-click the file in Drive -> Share -> General access ->
+     "Anyone with the link" -> Copy link -> send it to Ricci.
+
+Manual alternative (if the script is blocked):
+  Open PowerShell and run these, replacing USERNAME/PASSWORD/YOURPATH
+  with your own values (keep the quotes):
+      cd YOURPATH
+      mkdir nc
+      Set-Location nc
+      $cookies = (Join-Path (Get-Location).Path "..\cookies.txt")
+      foreach ($url in (Get-Content ..\sst_urls.txt)) {
+        $base = [System.IO.Path]::GetFileName(($url -replace "[?#].*$", ""))
+        if (Test-Path $base) { Remove-Item $base -Force }
+        curl.exe --fail -sS -L --location-trusted --connect-timeout 20 --retry 5 `
+          --retry-all-errors -C - -u "USERNAME:PASSWORD" -b $cookies -c $cookies `
+          -o $base $url
+      }
+  Then go back up (Set-Location ..) and zip the "nc" folder as in step 6.
+
+Notes:
+  - The `-L` flag is ESSENTIAL: NASA's download links redirect, and without
+    it curl saves an HTML page instead of the real temperature file.
+  - You may re-run the script to retry any failed files (it resumes).
+  - The files MUST keep their exact names (they encode the dates).
+  - Use YOUR OWN account - do not reuse anyone's credentials, and do not
+    share your password with anyone.

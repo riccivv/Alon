@@ -1,0 +1,65 @@
+[project]
+name = "oceanforecast-ph"
+version = "0.1.0"
+description = "Dynamic Oceanographic Fisheries Yield Forecasting for the Philippines"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Ricci" }]
+license = { text = "MIT" }
+keywords = ["fisheries", "oceanography", "satellite", "forecasting", "machine-learning", "philippines"]
+dependencies = [
+    "earthaccess>=0.8.0",
+    "xarray>=2024.1.0",
+    "netCDF4>=1.6.0",
+    "rioxarray>=0.15.0",
+    "pandas>=2.0.0",
+    "numpy>=1.26.0",
+    "scipy>=1.11.0",
+    "scikit-learn>=1.4.0",
+    "xgboost>=2.0.0",
+    "streamlit>=1.32.0",
+    "plotly>=5.18.0",
+    "folium>=0.16.0",
+    "streamlit-folium>=0.19.0",
+    "pyproj>=3.6.0",
+    "shapely>=2.0.0",
+    "geopandas>=0.14.0",
+    "python-dotenv>=1.0.0",
+    "pdfplumber>=0.11.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.0.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "ruff>=0.1.0",
+]
+dl = [
+    "tensorflow>=2.15.0",
+]
+
+[project.scripts]
+oceanforecast = "app.main:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*", "src*"]
+
+[tool.setuptools]
+package-data = { "app" = ["**/*.toml", "**/*.yaml", "**/*.json"] }
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.black]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

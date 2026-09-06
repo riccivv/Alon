@@ -1,0 +1,34 @@
+%% =============================================================================
+%% OceanForecast Philippines - Data Pipeline (Stages 1 & 2)
+%% Shows what the data looks like at each step and where it is stored.
+%% =============================================================================
+
+flowchart LR
+    subgraph ACQ["STAGE 1 - DATA ACQUISITION"]
+        A1["CMR search<br/>PH bbox + date range"] --> A2["earthaccess.download<br/>8-day / 9 km L3m granules"]
+        A2 --> A3["data/raw/&lt;dataset&gt;/*.nc<br/>~1800 granules"]
+    end
+
+    subgraph PREP["STAGE 2 - PREPROCESSING"]
+        B1["open_mfdataset +<br/>bbox subset"] --> B2["bilinear regrid<br/>-> 0.1 deg grid"]
+        B2 --> B3["cloud gap-fill<br/>temporal interpolation"]
+        B3 --> B4["rolling means 7/14/30/90d<br/>+ monthly climatology anomalies"]
+        B4 --> B5["derived indices<br/>frontal / productivity / upwelling"]
+        B5 --> B6["spatial neighborhood lags<br/>20 / 50 / 100 km"]
+    end
+
+    subgraph OUT["OUTPUT ARTIFACTS"]
+        C1["feature cube<br/>data/processed/ph_cube.zarr"]
+        C2["long feature matrix<br/>[lat, lon, time, features]"]
+        C3["docs/diagrams/*.png<br/>before/after visual evidence"]
+    end
+
+    A3 --> PREP
+    B6 --> C1 --> C2
+    B1 -.snapshot.-> C3
+    B2 -.snapshot.-> C3
+    B3 -.snapshot.-> C3
+
+    style ACQ fill:#1a3d5c,color:#fff,stroke:#0f2a40
+    style PREP fill:#0f4d3a,color:#fff,stroke:#093427
+    style OUT fill:#4a1a5c,color:#fff,stroke:#331040

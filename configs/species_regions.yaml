@@ -1,0 +1,61 @@
+# ==============================================================================
+# Species configuration for OceanForecast Philippines
+# ==============================================================================
+
+species:
+  - code: sardinella
+    name: Sardines
+    species_names: [Sardinella tawilis, Sardinella lemuru, Sardinella longiceps]
+    local_names: [Tamban, Tunsoy]
+    category: pelagic
+    optimal_sst_range: [26.0, 31.0]
+    optimal_chla_range: [0.2, 3.0]
+
+  - code: anchovy
+    name: Anchovies
+    species_names: [Encrasicholina punctifer, Stolephorus indicus]
+    local_names: [Dilis, Bolinao]
+    category: pelagic
+    optimal_sst_range: [26.5, 30.0]
+    optimal_chla_range: [0.3, 4.0]
+
+  - code: mackerel
+    name: Indian Mackerel
+    species_names: [Rastrelliger kanagurta, Rastrelliger brachysoma]
+    local_names: [Alumahan, Guro]
+    category: pelagic
+    optimal_sst_range: [27.0, 31.0]
+    optimal_chla_range: [0.1, 2.0]
+
+  - code: scad
+    name: Round Scad
+    species_names: [Decapterus macrosoma, Decapterus maruadsi]
+    local_names: [Galunggong, Mamale]
+    category: pelagic
+    optimal_sst_range: [26.0, 30.0]
+    optimal_chla_range: [0.2, 3.5]
+
+regions:
+  - name: FMA1 - North Philippine Sea
+    bbox: [120.0, 15.0, 125.0, 21.5]
+    description: Northern Luzon, Batanes, Babuyan
+
+  - name: FMA2 - West Philippine Sea
+    bbox: [116.0, 8.0, 120.5, 21.5]
+    description: South China Sea side, Palawan
+
+  - name: FMA3 - Sulu-Celebes Sea
+    bbox: [117.5, 3.0, 122.5, 9.5]
+    description: Tawi-Tawi, Basilan, Sulu
+
+  - name: FMA4 - Visayan Sea
+    bbox: [122.5, 9.0, 125.0, 12.5]
+    description: Central Visayas, Panay, Negros
+
+  - name: FMA5 - West Sulu Sea
+    bbox: [117.0, 7.0, 121.0, 12.0]
+    description: Palawan east coast, eastern Sulu
+
+  - name: FMA6 - East Philippine Sea
+    bbox: [124.0, 6.0, 127.0, 18.0]
+    description: Pacific coast, Eastern Visayas to Bicol

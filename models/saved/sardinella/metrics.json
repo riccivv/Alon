@@ -1,0 +1,70 @@
+{
+  "species_code": "sardinella",
+  "species_name": "Sardines (Sardinella)",
+  "label_kind": "catch",
+  "target_transform": "log1p",
+  "n_train": 24519,
+  "n_val": 5807,
+  "n_holdout": 2887,
+  "val_metrics": {
+    "rmse": 1.3338460816535982,
+    "mae": 1.0193859284812226,
+    "r2": 0.5827549819708099
+  },
+  "feature_importance": [
+    {
+      "feature": "dist_coast",
+      "importance": 0.4469509422779083
+    },
+    {
+      "feature": "par",
+      "importance": 0.2166658639907837
+    },
+    {
+      "feature": "slope",
+      "importance": 0.16334232687950134
+    },
+    {
+      "feature": "depth",
+      "importance": 0.15472260117530823
+    },
+    {
+      "feature": "month_cos",
+      "importance": 0.010622763074934483
+    },
+    {
+      "feature": "month_sin",
+      "importance": 0.0074580456130206585
+    },
+    {
+      "feature": "sst_anom",
+      "importance": 0.0001226433232659474
+    },
+    {
+      "feature": "sst",
+      "importance": 0.00011486648872960359
+    }
+  ],
+  "features": [
+    "sst",
+    "sst_anom",
+    "chl",
+    "chl_roll30d",
+    "chl_anom",
+    "kd490",
+    "par",
+    "depth",
+    "slope",
+    "dist_coast",
+    "frontal_index",
+    "productivity_index",
+    "upwelling_proxy",
+    "month_sin",
+    "month_cos"
+  ],
+  "holdout_metrics": {
+    "rmse": 1.5901992053437553,
+    "mae": 1.2064225321181954,
+    "r2": 0.4809658871162009
+  }
+}
