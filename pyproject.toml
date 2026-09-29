@@ -5,7 +5,8 @@ description = "Dynamic Oceanographic Fisheries Yield Forecasting for the Philipp
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "Ricci" }]
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 keywords = ["fisheries", "oceanography", "satellite", "forecasting", "machine-learning", "philippines"]
 dependencies = [
     "earthaccess>=0.8.0",

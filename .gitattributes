@@ -1,0 +1,33 @@
+# Normalize line endings in the repository to LF; check out CRLF only for
+# Windows-native scripts. Prevents spurious whole-file diffs across OSes.
+* text=auto eol=lf
+
+# Windows-native scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Generated / non-source files
+*.csv text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.mmd text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.log text eol=lf
+
+# Binary artifacts
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.pt binary
+*.pth binary
+*.onnx binary
+*.pkl binary
+*.nc binary
+*.zarr binary
+*.parquet binary
+*.xlsx binary
